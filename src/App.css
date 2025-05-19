@@ -159,15 +159,18 @@ body {
   flex-direction: column;
 }
 
-.product-image {
+.product-image-container {
   height: 150px;
-  background-color: #f8f8f8;
-  border-radius: 15px;
-  margin-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.product-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .card-title {

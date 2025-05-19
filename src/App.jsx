@@ -1,9 +1,16 @@
 import React, { useState, useRef } from "react";
 import "./App.css";
-import Khalti from "./assets/khalti.png"
-import Esewa from "./assets/esewa.png"
-import Card from "./assets/card.png"
+import Khalti from "./assets/khalti.png";
+import Esewa from "./assets/esewa.png";
+import Card from "./assets/card.png";
 
+// Import product images
+import HydratingMoisturizer from "./assets/products/Gentle-Cleanser.png";
+import VitaminCSerum from "./assets/products/Gentle-Cleanser.png";
+import GentleCleanser from "./assets/products/Gentle-Cleanser.png";
+import NightRepairGel from "./assets/products/Gentle-Cleanser.png";
+import TonerMist from "./assets/products/Gentle-Cleanser.png";
+import EyeCream from "./assets/products/Gentle-Cleanser.png";
 
 const products = [
   {
@@ -11,36 +18,42 @@ const products = [
     title: "Hydrating Moisturizer",
     description: "A lightweight, oil-free moisturizer that provides 24-hour hydration.",
     price: "Rs. 290.99",
+    image: HydratingMoisturizer,
   },
   {
     id: 2,
     title: "Vitamin C Serum",
     description: "Brightens skin and reduces the appearance of dark spots.",
     price: "Rs. 490.99",
+    image: VitaminCSerum,
   },
   {
     id: 3,
     title: "Gentle Cleanser",
     description: "Removes dirt, oil, and makeup without stripping the skin.",
     price: "Rs. 190.99",
+    image: GentleCleanser,
   },
   {
     id: 4,
     title: "Night Repair Gel",
     description: "Repairs and rejuvenates skin overnight.",
     price: "Rs. 340.99",
+    image: NightRepairGel,
   },
   {
     id: 5,
     title: "Toner Mist",
     description: "Instantly refreshes your skin.",
     price: "Rs. 120.50",
+    image: TonerMist,
   },
   {
     id: 6,
     title: "Eye Cream",
     description: "Reduces puffiness and dark circles.",
     price: "Rs. 220.00",
+    image: EyeCream,
   },
 ];
 
@@ -124,7 +137,9 @@ export default function App() {
           <div className="product-grid">
             {products.map((product) => (
               <div key={product.id} className="product-card">
-                <div className="product-image"></div>
+                <div className="product-image-container">
+                  <img src={product.image} alt={product.title} className="product-image" />
+                </div>
                 <h3 className="card-title">{product.title}</h3>
                 <p className="card-desc">{product.description}</p>
                 <div className="card-footer">
