@@ -5,8 +5,8 @@ import Esewa from "./assets/esewa.png";
 import Card from "./assets/card.png";
 
 // Import product images
-import HydratingMoisturizer from "./assets/products/Gentle-Cleanser.png";
-import VitaminCSerum from "./assets/products/Gentle-Cleanser.png";
+import HydratingMoisturizer from "./assets/products/dermaco-moisturizer.png";
+import VitaminCSerum from "./assets/products/mamaearth-vit-c.png";
 import GentleCleanser from "./assets/products/Gentle-Cleanser.png";
 import NightRepairGel from "./assets/products/Gentle-Cleanser.png";
 import TonerMist from "./assets/products/Gentle-Cleanser.png";
