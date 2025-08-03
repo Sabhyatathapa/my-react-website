@@ -126,9 +126,14 @@ export default function App() {
         </div>
       </nav>
 
-      <header className="app-header" id="home" ref={sectionRefs.home}>
-        <h1 className="app-title">FAS</h1>
-        <p className="app-subtitle">Pokhara, Nepal's trusted ecommerce for skincare & beauty</p>
+      <header className="hero-section" id="home" ref={sectionRefs.home}>
+        <div className="hero-bg">
+          <div className="hero-content">
+            <h1 className="hero-title">TOLUS SPRING COLLECTION</h1>
+            <p className="hero-subtext">Find out our best spring collection. Offering our best quality product in a Tolus spring collection</p>
+            <button className="hero-buy-btn">Buy Now</button>
+          </div>
+        </div>
       </header>
 
       <main className="app-main">

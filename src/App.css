@@ -1,3 +1,77 @@
+/* Hero Section Styles */
+.hero-section {
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 0 40px;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 60px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+.hero-buy-btn {
+  background: #7D2000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.hero-buy-btn:hover {
+  background: #5a1600;
+}
 * {
   box-sizing: border-box;
   margin: 0;
