@@ -1,16 +1,21 @@
+
 import React, { useState, useRef } from "react";
 import "./App.css";
 import Khalti from "./assets/khalti.png";
 import Esewa from "./assets/esewa.png";
 import Card from "./assets/card.png";
-
-// Import product images
 import HydratingMoisturizer from "./assets/products/dermaco-moisturizer.png";
 import VitaminCSerum from "./assets/products/mamaearth-vit-c.png";
 import GentleCleanser from "./assets/products/Gentle-Cleanser.png";
 import NightRepairGel from "./assets/products/Gentle-Cleanser.png";
 import TonerMist from "./assets/products/Gentle-Cleanser.png";
 import EyeCream from "./assets/products/Gentle-Cleanser.png";
+
+import HeroSection from "./sections/HeroSection";
+import AboutSection from "./sections/AboutSection";
+import ProductsSection from "./sections/ProductsSection";
+import ContactSection from "./sections/ContactSection";
+import FooterSection from "./sections/FooterSection";
 
 const products = [
   {
@@ -126,91 +131,12 @@ export default function App() {
         </div>
       </nav>
 
-      <header className="hero-section" id="home" ref={sectionRefs.home}>
-        <div className="hero-bg">
-          <div className="hero-content">
-            <h1 className="hero-title">TOLUS SPRING COLLECTION</h1>
-            <p className="hero-subtext">Find out our best spring collection. Offering our best quality product in a Tolus spring collection</p>
-            <button className="hero-buy-btn">Buy Now</button>
-          </div>
-        </div>
-      </header>
+      <HeroSection />
 
       <main className="app-main">
-        <section id="products" ref={sectionRefs.products}>
-          <h2 className="section-title">Our Featured Products</h2>
-          <div className="product-grid">
-            {products.map((product) => (
-              <div key={product.id} className="product-card">
-                <div className="product-image-container">
-                  <img src={product.image} alt={product.title} className="product-image" />
-                </div>
-                <h3 className="card-title">{product.title}</h3>
-                <p className="card-desc">{product.description}</p>
-                <div className="card-footer">
-                  <span className="price">{product.price}</span>
-                  <button
-                    onClick={() => handleBuyNow(product)}
-                    className="buy-button"
-                  >
-                    Buy Now
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="about" className="about-section" ref={sectionRefs.about}>
-          <h2 className="section-title">About FAS</h2>
-          <div className="about-content">
-            <p>Welcome to FAS, your trusted ecommerce partner from Pokhara, Nepal. We are dedicated to providing high-quality skincare and beauty products for everyone in Nepal.</p>
-            <h3>Our Mission</h3>
-            <p>To empower individuals in Nepal to feel confident and beautiful by offering effective, safe, and innovative products at your doorstep.</p>
-            <h3>Our Values</h3>
-            <ul className="values-list">
-              <li><strong>Quality:</strong> Only the best, authentic products for our customers.</li>
-              <li><strong>Innovation:</strong> Always bringing new and trending products to Nepal.</li>
-              <li><strong>Local Focus:</strong> Proudly based in Pokhara, serving all of Nepal.</li>
-              <li><strong>Customer Care:</strong> Your satisfaction is our top priority. Contact us anytime!</li>
-            </ul>
-            <h3>Our Team</h3>
-            <p>We are a passionate team from Pokhara, Nepal, committed to making online shopping easy, safe, and enjoyable for you.</p>
-          </div>
-        </section>
-
-        <section id="contact" className="contact-section" ref={sectionRefs.contact}>
-          <h2 className="section-title">Contact Us</h2>
-          <div className="contact-content">
-            <p>We'd love to hear from you! For any questions, suggestions, or support, please use the details below.</p>
-            <div className="contact-details">
-              <div className="contact-info">
-                <h3>FAS Support</h3>
-                <p><strong>Email:</strong> <a href="mailto:testfasemaail@gmail.com">testfasemaail@gmail.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:9812345678">9812345678</a></p>
-                <p><strong>Location:</strong> Pokhara, Nepal</p>
-              </div>
-            </div>
-            <div className="contact-form">
-              <h3>Send Us a Message</h3>
-              <form>
-                <div className="form-group">
-                  <label htmlFor="name">Name:</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email:</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="message">Message:</label>
-                  <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" className="submit-button">Send Message</button>
-              </form>
-            </div>
-          </div>
-        </section>
+        <ProductsSection sectionRef={sectionRefs.products} products={products} handleBuyNow={handleBuyNow} />
+        <AboutSection sectionRef={sectionRefs.about} />
+        <ContactSection sectionRef={sectionRefs.contact} />
       </main>
 
       {showPaymentPopup && (
@@ -238,58 +164,7 @@ export default function App() {
         </div>
       )}
 
-      <footer className="custom-footer">
-        <div className="footer-main">
-          <div className="footer-brand-newsletter">
-            <div className="footer-logo">FAS</div>
-            <p className="footer-newsletter-text">Get newsletter update for upcoming product and best discount for all item</p>
-            <form className="footer-newsletter-form" onSubmit={e => e.preventDefault()}>
-              <input type="email" className="footer-input" placeholder="Your email" required />
-              <button className="footer-submit" type="submit">Submit</button>
-            </form>
-          </div>
-          <div className="footer-links">
-            <div className="footer-col">
-              <div className="footer-col-title">Product</div>
-              <ul>
-                <li>T-Shirt</li>
-                <li>Shoes</li>
-                <li>Sunglasses</li>
-                <li>Boots</li>
-                <li>Pants</li>
-                <li>Jacket</li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <div className="footer-col-title">Categories</div>
-              <ul>
-                <li>Man</li>
-                <li>Woman</li>
-                <li>Kids</li>
-                <li>Gift</li>
-                <li>New Arrival</li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <div className="footer-col-title">Social Media</div>
-              <ul>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>LinkedIn</li>
-                <li>X</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <div className="footer-copyright">2025 AGs Production</div>
-          <div className="footer-policies">
-            <span>Terms &amp; Conditions</span>
-            <span>Privacy Policy</span>
-            <span>Cookie Policy</span>
-          </div>
-        </div>
-      </footer>
+      <FooterSection />
     </div>
   );
 }
