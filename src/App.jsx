@@ -97,7 +97,7 @@ export default function App() {
     <div className="app-container">
       <nav className="navbar">
         <div className="navbar-container">
-          <a href="/" className="navbar-logo" onClick={() => handleNavClick("home")}>Skincare</a>
+          <a href="/" className="navbar-logo" onClick={() => handleNavClick("home")}>FAS</a>
           <div className="menu-icon" onClick={toggleMobileMenu}>
             <i className={isMobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
@@ -127,8 +127,8 @@ export default function App() {
       </nav>
 
       <header className="app-header" id="home" ref={sectionRefs.home}>
-        <h1 className="app-title">Skincare</h1>
-        <p className="app-subtitle">Nourish your skin with our handpicked products</p>
+        <h1 className="app-title">FAS</h1>
+        <p className="app-subtitle">Pokhara, Nepal's trusted ecommerce for skincare & beauty</p>
       </header>
 
       <main className="app-main">
@@ -157,39 +157,33 @@ export default function App() {
         </section>
 
         <section id="about" className="about-section" ref={sectionRefs.about}>
-          <h2 className="section-title">About Us</h2>
+          <h2 className="section-title">About FAS</h2>
           <div className="about-content">
-            <p>Welcome to Skincare, your trusted partner in achieving healthy, radiant skin. Founded in 2010, we have been dedicated to providing high-quality skincare products that cater to all skin types and concerns.</p>
+            <p>Welcome to FAS, your trusted ecommerce partner from Pokhara, Nepal. We are dedicated to providing high-quality skincare and beauty products for everyone in Nepal.</p>
             <h3>Our Mission</h3>
-            <p>Our mission is to empower individuals to feel confident in their skin by offering effective, safe, and innovative skincare solutions. We believe that everyone deserves to have access to products that enhance their natural beauty.</p>
+            <p>To empower individuals in Nepal to feel confident and beautiful by offering effective, safe, and innovative products at your doorstep.</p>
             <h3>Our Values</h3>
             <ul className="values-list">
-              <li><strong>Quality:</strong> We use only the finest ingredients in our products to ensure the best results.</li>
-              <li><strong>Innovation:</strong> Our team of experts is constantly researching and developing new formulas to address various skin concerns.</li>
-              <li><strong>Sustainability:</strong> We are committed to eco-friendly practices and sustainable sourcing.</li>
-              <li><strong>Customer Care:</strong> Your satisfaction is our top priority. We strive to provide exceptional customer service and support.</li>
+              <li><strong>Quality:</strong> Only the best, authentic products for our customers.</li>
+              <li><strong>Innovation:</strong> Always bringing new and trending products to Nepal.</li>
+              <li><strong>Local Focus:</strong> Proudly based in Pokhara, serving all of Nepal.</li>
+              <li><strong>Customer Care:</strong> Your satisfaction is our top priority. Contact us anytime!</li>
             </ul>
             <h3>Our Team</h3>
-            <p>Our team consists of experienced dermatologists, skincare specialists, and beauty experts who work together to create products that deliver visible results. We are passionate about skincare and dedicated to helping you achieve your best skin ever.</p>
+            <p>We are a passionate team from Pokhara, Nepal, committed to making online shopping easy, safe, and enjoyable for you.</p>
           </div>
         </section>
 
         <section id="contact" className="contact-section" ref={sectionRefs.contact}>
           <h2 className="section-title">Contact Us</h2>
           <div className="contact-content">
-            <p>We'd love to hear from you! Whether you have a question about our products, need skincare advice, or just want to share your experience, feel free to reach out to us.</p>
+            <p>We'd love to hear from you! For any questions, suggestions, or support, please use the details below.</p>
             <div className="contact-details">
               <div className="contact-info">
-                <h3>Customer Service</h3>
-                <p><strong>Email:</strong> <a href="mailto:customerservice@skincare.com">customerservice@skincare.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+1234567890">+123 456 7890</a></p>
-                <p><strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM</p>
-              </div>
-              <div className="contact-info">
-                <h3>Headquarters</h3>
-                <p><strong>Address:</strong> 123 Skincare Street, Beauty City, BC 12345</p>
-                <p><strong>Email:</strong> <a href="mailto:info@skincare.com">info@skincare.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+1234567891">+123 456 7891</a></p>
+                <h3>FAS Support</h3>
+                <p><strong>Email:</strong> <a href="mailto:testfasemaail@gmail.com">testfasemaail@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:9812345678">9812345678</a></p>
+                <p><strong>Location:</strong> Pokhara, Nepal</p>
               </div>
             </div>
             <div className="contact-form">
@@ -240,7 +234,7 @@ export default function App() {
       )}
 
       <footer className="app-footer">
-        <p>&copy; {new Date().getFullYear()} Skincare. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} FAS, Pokhara, Nepal. All rights reserved.</p>
       </footer>
     </div>
   );
